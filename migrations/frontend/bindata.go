@@ -100,6 +100,10 @@
 // 1528395732_add_external_services_sync_jobs_state_index.up.sql (120B)
 // 1528395733_add_permissions_object_ids_default.down.sql (297B)
 // 1528395733_add_permissions_object_ids_default.up.sql (313B)
+// 1528395734_campaign_apply_jobs.down.sql (85B)
+// 1528395734_campaigns_apply_jobs.up.sql (616B)
+// 1528395735_repo_updater_log_contents.down.sql (494B)
+// 1528395735_repo_updater_log_contents.up.sql (511B)
 
 package migrations
 
@@ -2168,6 +2172,86 @@ func _1528395733_add_permissions_object_ids_defaultUpSql() (*asset, error) {
 	return a, nil
 }
 
+var __1528395734_campaign_apply_jobsDownSql = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x72\x72\x75\xf7\xf4\xb3\xe6\xe2\x72\x09\xf2\x0f\x50\x08\x71\x74\xf2\x71\x55\x48\x4e\xcc\x2d\x48\xcc\x4c\xcf\x8b\x4f\x2c\x28\xc8\xa9\x8c\xcf\xca\x4f\x2a\xb6\x86\xca\x47\x06\x60\x93\x8e\x2f\x2e\x49\x2c\x49\xb5\xe6\xe2\x72\xf6\xf7\xf5\xf5\x0c\xb1\xe6\x02\x04\x00\x00\xff\xff\xfe\xcf\x09\x32\x55\x00\x00\x00")
+
+func _1528395734_campaign_apply_jobsDownSqlBytes() ([]byte, error) {
+	return bindataRead(
+		__1528395734_campaign_apply_jobsDownSql,
+		"1528395734_campaign_apply_jobs.down.sql",
+	)
+}
+
+func _1528395734_campaign_apply_jobsDownSql() (*asset, error) {
+	bytes, err := _1528395734_campaign_apply_jobsDownSqlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "1528395734_campaign_apply_jobs.down.sql", size: 0, mode: os.FileMode(0), modTime: time.Unix(0, 0)}
+	a := &asset{bytes: bytes, info: info, digest: [32]uint8{0x5e, 0x8d, 0xf0, 0x84, 0xaa, 0xa3, 0xc0, 0xf9, 0xe3, 0x8c, 0xca, 0x5c, 0x5d, 0x30, 0x8, 0xe2, 0x28, 0x52, 0x2e, 0xe7, 0xf4, 0x94, 0xc8, 0xab, 0x86, 0xd1, 0x81, 0x84, 0x73, 0xcd, 0x46, 0x79}}
+	return a, nil
+}
+
+var __1528395734_campaigns_apply_jobsUpSql = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x8c\x91\x4f\x4f\xf3\x30\x0c\x87\xef\xfd\x14\xbe\x6d\x93\xde\xc3\x7b\xdf\xa9\x83\x80\x26\x75\x1d\x82\xee\xc0\x29\xca\x3a\x2f\x33\x34\x7f\x48\x5c\x8d\xf2\xe9\x91\x9a\xb2\x82\x06\x8c\xa3\xdd\xc7\xfe\xf9\x69\x16\xe2\x76\x59\xce\xb3\xec\xea\x5e\xe4\x95\x80\xea\xf1\x4e\x40\xad\x8c\x57\xa4\xad\x54\xde\x37\x9d\x7c\x72\x5b\x19\x59\x31\x42\xfe\x00\xa2\xdc\xac\x60\x9a\x01\x00\x4c\x5e\x5a\x6c\x71\x37\xf9\x97\x2a\x1f\x5c\x8d\x31\x92\xd5\x1f\x9d\xda\x19\xdf\x20\x8f\x08\x86\xe0\x02\xee\x26\xd9\xec\x53\x62\xbe\x28\xbe\x8b\x8c\x29\x84\x76\xb0\x25\x4d\x96\xa1\x5c\x57\x50\x6e\x8a\x02\x7c\x20\xa3\x42\x07\xcf\xd8\xa5\xbd\xe9\x0e\xa9\x18\x98\x0c\x46\x56\xc6\xc3\x91\xf8\xd0\x97\xf0\xe6\x2c\x8e\xc3\xd7\xe2\x26\xdf\x14\x15\x58\x77\x9c\xce\xd2\x78\x72\xfb\x51\xfa\x6c\xf4\xab\xf7\x5e\x51\xd3\x06\x94\x06\x63\x54\x1a\x81\xf1\x95\x4f\x7b\x03\xff\x7e\xd7\xb0\x82\x2c\xc5\xc3\x5f\xc8\xe1\x1f\x4b\xb5\x67\x0c\x17\x58\xdb\x1a\x19\x30\x22\x47\x20\xcb\xa8\x31\x9c\xab\xfc\x1f\xd1\xc1\xe3\x32\xdc\x29\xd3\xf4\x96\x27\x22\xf5\x1b\xa7\x65\xed\x2c\xa3\xe5\xd8\x7f\x4f\xaf\xbc\x5e\xad\x96\xd5\x3c\x7b\x0f\x00\x00\xff\xff\x73\x0f\xf1\xa0\x68\x02\x00\x00")
+
+func _1528395734_campaigns_apply_jobsUpSqlBytes() ([]byte, error) {
+	return bindataRead(
+		__1528395734_campaigns_apply_jobsUpSql,
+		"1528395734_campaigns_apply_jobs.up.sql",
+	)
+}
+
+func _1528395734_campaigns_apply_jobsUpSql() (*asset, error) {
+	bytes, err := _1528395734_campaigns_apply_jobsUpSqlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "1528395734_campaigns_apply_jobs.up.sql", size: 0, mode: os.FileMode(0), modTime: time.Unix(0, 0)}
+	a := &asset{bytes: bytes, info: info, digest: [32]uint8{0x1b, 0xfa, 0xa1, 0x16, 0x40, 0xa0, 0x2b, 0x82, 0x78, 0x2e, 0xaf, 0xcd, 0x1b, 0xbc, 0xc4, 0xe7, 0xcc, 0x1c, 0x51, 0x3d, 0x81, 0xfc, 0xc7, 0x9f, 0x27, 0xdb, 0x5e, 0x3c, 0x46, 0x3b, 0x3, 0x2}}
+	return a, nil
+}
+
+var __1528395735_repo_updater_log_contentsDownSql = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x94\x90\x4b\x4e\xc3\x30\x10\x86\xf7\x3e\xc5\x1c\x00\xe5\x02\x11\x8b\x34\x18\x14\x94\xc4\x95\x6b\x60\x39\x32\xe9\xb4\x75\x94\x3a\xc8\x33\x85\x72\x7b\xc4\x23\x55\x50\x51\x25\x96\xfe\xf4\x7b\xfe\xc7\x42\xdf\x55\x6d\xae\xd4\x8d\x35\x4b\x78\xac\xf4\x13\xd0\x51\x28\x45\x3f\x20\x53\x7a\x0d\x1d\x21\xbf\xc7\x0e\xfb\xf1\x99\xf1\x2d\xc8\x0e\x23\x1d\xe5\x9b\x79\xc9\x95\x2a\x6a\xa7\x2d\xb8\x62\x51\xeb\x0b\x5f\xe1\xeb\x7e\x69\xea\x87\xa6\x85\x61\xdc\x62\x37\x46\xa1\x28\x9c\x2b\x55\x5a\x5d\x38\x0d\xc6\x82\xd5\xcb\xba\x28\xf5\xff\x73\x40\xb1\x82\x95\xae\x75\xe9\xa0\xcf\xc2\xfa\x4a\x01\x00\xf4\x19\x8b\x17\x9a\x1e\x1b\x1f\x86\x43\x22\xdc\x13\xb3\xdf\xd2\x4c\x93\x84\xd6\xe8\xe5\x24\x0c\x31\xf0\xee\x17\x7a\x49\x63\x47\xcc\xe8\x37\x42\x69\x82\xf1\xb0\xc7\x44\x4c\xc2\x73\xf2\x63\x73\x62\x67\x35\xa6\x78\x94\xcd\x1b\xa8\x5b\x6b\x9a\xb3\xce\x0c\x04\xf7\xa6\x6a\x2f\x2d\xdb\x83\x69\x81\xb2\xb0\x86\xeb\xbf\xed\x3e\x27\x36\x4d\x53\xb9\x5c\x7d\x04\x00\x00\xff\xff\x81\x89\xbf\xf0\xee\x01\x00\x00")
+
+func _1528395735_repo_updater_log_contentsDownSqlBytes() ([]byte, error) {
+	return bindataRead(
+		__1528395735_repo_updater_log_contentsDownSql,
+		"1528395735_repo_updater_log_contents.down.sql",
+	)
+}
+
+func _1528395735_repo_updater_log_contentsDownSql() (*asset, error) {
+	bytes, err := _1528395735_repo_updater_log_contentsDownSqlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "1528395735_repo_updater_log_contents.down.sql", size: 0, mode: os.FileMode(0), modTime: time.Unix(0, 0)}
+	a := &asset{bytes: bytes, info: info, digest: [32]uint8{0xab, 0x2b, 0x6c, 0xc4, 0xca, 0xbe, 0x4b, 0x74, 0xf2, 0xb0, 0xf9, 0x9d, 0x31, 0x3e, 0xce, 0xfa, 0x9b, 0x95, 0x32, 0x2e, 0xdb, 0x1f, 0x73, 0x62, 0xb8, 0x92, 0xc6, 0x28, 0xfb, 0xe1, 0x3, 0x3e}}
+	return a, nil
+}
+
+var __1528395735_repo_updater_log_contentsUpSql = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x94\x90\xdf\x4e\x83\x30\x14\xc6\xef\xfb\x14\xe7\x01\x0c\x2f\x40\xbc\x60\x50\x0d\x06\xa8\x61\xa8\x97\x27\x15\xce\xb6\x12\x56\x4c\xcf\x99\xe2\xdb\x9b\xc5\xb1\x60\x66\x96\xec\xae\xfd\xe5\x6b\xbf\x3f\x2b\xfd\x98\x57\xb1\x52\x59\x6d\x9e\xe1\x35\xd7\x6f\x40\x93\x50\xf0\x76\x40\xa6\xf0\xe9\x5a\x42\xfe\xf6\x2d\xf6\xe3\x3b\xe3\x97\x93\x1d\x7a\x9a\xe4\x97\x59\x89\x95\x4a\x8a\x46\xd7\xd0\x24\xab\x42\x5f\x79\x0a\x49\x96\x41\x6a\x8a\x97\xb2\x82\x61\xdc\x62\x3b\x7a\x21\x2f\x0c\x42\xd3\xf1\x97\xb4\xd6\x49\xa3\x6f\x0f\x00\xc9\x1a\xd6\xba\xd0\x69\xa3\x00\x00\xfa\xc8\x75\x77\xa7\x13\x8b\x15\x9a\x2f\x1b\xeb\x86\x43\x20\xdc\x13\xb3\xdd\xd2\x42\x13\x84\x3a\xb4\x72\x16\x3a\xef\x78\xf7\x07\x7d\x84\xb1\x25\x66\xb4\x1b\xa1\x30\x43\x7f\xd8\x63\x20\x26\xe1\x25\x39\xd9\x9c\xd9\xb2\xea\xcc\x2e\xea\xcd\x91\x29\x5a\x36\x53\x0f\xb5\x29\x2f\xb6\x60\x20\x78\x32\x79\x75\x6d\xea\x1e\x4c\x05\x14\xb9\x0e\xee\xff\xb7\x3b\xee\x6d\xca\x32\x6f\x62\xf5\x13\x00\x00\xff\xff\xe9\xfe\x9e\xcf\xff\x01\x00\x00")
+
+func _1528395735_repo_updater_log_contentsUpSqlBytes() ([]byte, error) {
+	return bindataRead(
+		__1528395735_repo_updater_log_contentsUpSql,
+		"1528395735_repo_updater_log_contents.up.sql",
+	)
+}
+
+func _1528395735_repo_updater_log_contentsUpSql() (*asset, error) {
+	bytes, err := _1528395735_repo_updater_log_contentsUpSqlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "1528395735_repo_updater_log_contents.up.sql", size: 0, mode: os.FileMode(0), modTime: time.Unix(0, 0)}
+	a := &asset{bytes: bytes, info: info, digest: [32]uint8{0x6f, 0x3b, 0x48, 0x27, 0xf4, 0x8b, 0xba, 0xcc, 0xfc, 0x26, 0x8a, 0xef, 0x47, 0xd4, 0x74, 0xf8, 0x28, 0xde, 0xd9, 0x4d, 0xd5, 0xc2, 0xab, 0x5e, 0x64, 0x28, 0xb0, 0x95, 0x7, 0x18, 0x13, 0xfa}}
+	return a, nil
+}
+
 // Asset loads and returns the asset for the given name.
 // It returns an error if the asset could not be found or
 // could not be loaded.
@@ -2359,6 +2443,10 @@ var _bindata = map[string]func() (*asset, error){
 	"1528395732_add_external_services_sync_jobs_state_index.up.sql":                _1528395732_add_external_services_sync_jobs_state_indexUpSql,
 	"1528395733_add_permissions_object_ids_default.down.sql":                       _1528395733_add_permissions_object_ids_defaultDownSql,
 	"1528395733_add_permissions_object_ids_default.up.sql":                         _1528395733_add_permissions_object_ids_defaultUpSql,
+	"1528395734_campaign_apply_jobs.down.sql":                                      _1528395734_campaign_apply_jobsDownSql,
+	"1528395734_campaigns_apply_jobs.up.sql":                                       _1528395734_campaigns_apply_jobsUpSql,
+	"1528395735_repo_updater_log_contents.down.sql":                                _1528395735_repo_updater_log_contentsDownSql,
+	"1528395735_repo_updater_log_contents.up.sql":                                  _1528395735_repo_updater_log_contentsUpSql,
 }
 
 // AssetDebug is true if the assets were built with the debug flag enabled.
@@ -2505,6 +2593,10 @@ var _bintree = &bintree{nil, map[string]*bintree{
 	"1528395732_add_external_services_sync_jobs_state_index.up.sql":                {_1528395732_add_external_services_sync_jobs_state_indexUpSql, map[string]*bintree{}},
 	"1528395733_add_permissions_object_ids_default.down.sql":                       {_1528395733_add_permissions_object_ids_defaultDownSql, map[string]*bintree{}},
 	"1528395733_add_permissions_object_ids_default.up.sql":                         {_1528395733_add_permissions_object_ids_defaultUpSql, map[string]*bintree{}},
+	"1528395734_campaign_apply_jobs.down.sql":                                      {_1528395734_campaign_apply_jobsDownSql, map[string]*bintree{}},
+	"1528395734_campaigns_apply_jobs.up.sql":                                       {_1528395734_campaigns_apply_jobsUpSql, map[string]*bintree{}},
+	"1528395735_repo_updater_log_contents.down.sql":                                {_1528395735_repo_updater_log_contentsDownSql, map[string]*bintree{}},
+	"1528395735_repo_updater_log_contents.up.sql":                                  {_1528395735_repo_updater_log_contentsUpSql, map[string]*bintree{}},
 }}
 
 // RestoreAsset restores an asset under the given directory.
