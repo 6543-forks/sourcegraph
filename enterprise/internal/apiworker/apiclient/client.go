@@ -6,14 +6,12 @@ import (
 	"net/http"
 	"net/url"
 	"path/filepath"
-
-	"github.com/sourcegraph/sourcegraph/internal/httpcli"
 )
 
 // Client is the client used to communicate with a remote job queue API.
 type Client struct {
 	options Options
-	client  *httpcli.BaseClient
+	client  *BaseClient
 }
 
 type Options struct {
@@ -27,7 +25,7 @@ type Options struct {
 	EndpointOptions EndpointOptions
 
 	// BaseClientOptions configures the underlying HTTP client behavior.
-	BaseClientOptions httpcli.BaseClientOptions
+	BaseClientOptions BaseClientOptions
 }
 
 type EndpointOptions struct {
@@ -44,7 +42,7 @@ type EndpointOptions struct {
 func New(options Options) *Client {
 	return &Client{
 		options: options,
-		client:  httpcli.NewBaseClient(options.BaseClientOptions),
+		client:  NewBaseClient(options.BaseClientOptions),
 	}
 }
 
@@ -121,7 +119,7 @@ func (c *Client) makeRequest(method, path string, payload interface{}) (*http.Re
 		return nil, err
 	}
 
-	return httpcli.MakeJSONRequest(method, u, payload)
+	return MakeJSONRequest(method, u, payload)
 }
 
 func makeURL(base, username, password string, path ...string) (*url.URL, error) {
