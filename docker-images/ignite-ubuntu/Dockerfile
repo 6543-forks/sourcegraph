@@ -9,7 +9,7 @@ RUN set -ex && \
 
 RUN mkdir -p /etc/docker/ && echo '{"registry-mirrors": ["http://localhost:5000"] }' >/etc/docker/daemon.json
 
-ENV SRC_CLI_VERSION=3.21.2
+ARG SRC_CLI_VERSION
 
 RUN set -ex && \
     curl -L -o src-cli.tar.gz "https://github.com/sourcegraph/src-cli/releases/download/${SRC_CLI_VERSION}/src-cli_${SRC_CLI_VERSION}_linux_amd64.tar.gz" && \

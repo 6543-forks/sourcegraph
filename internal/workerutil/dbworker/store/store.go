@@ -229,6 +229,7 @@ func (s *store) QueuedCount(ctx context.Context, conditions []*sqlf.Query) (int,
 	count, _, err := basestore.ScanFirstInt(s.Query(ctx, s.formatQuery(
 		queuedCountQuery,
 		quote(s.options.ViewName),
+		s.options.MaxNumRetries,
 		makeConditionSuffix(conditions),
 	)))
 
@@ -237,7 +238,10 @@ func (s *store) QueuedCount(ctx context.Context, conditions []*sqlf.Query) (int,
 
 const queuedCountQuery = `
 -- source: internal/workerutil/store.go:QueuedCount
-SELECT COUNT(*) FROM %s WHERE {state} = 'queued' %s
+SELECT COUNT(*) FROM %s WHERE (
+	{state} = 'queued' OR
+	({state} = 'errored' AND {num_failures} < %s)
+) %s
 `
 
 // Dequeue selects the first unlocked record matching the given conditions and locks it in a new transaction that
@@ -421,7 +425,7 @@ func (s *store) SetLogContents(ctx context.Context, id int, logContents string) 
 }
 
 const setLogContentsQuery = `
--- source: internal/workerutil/store.go:Requeue
+-- source: internal/workerutil/store.go:SetLogContents
 UPDATE %s
 SET {log_contents} = %s
 WHERE {id} = %s
