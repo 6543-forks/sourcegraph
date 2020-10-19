@@ -72,7 +72,7 @@ mSXt7lUbEmiQep700eM7YlgrOxUVqHsjf1QMrNfq05Ajr8uDfHim
 
 var (
 	timeFixture = time.Date(2018, time.September, 22, 21, 33, 44, 0, time.UTC)
-	infoFixture = Info{Tags: []string{"a"}, UserCount: 123, ExpiresAt: timeFixture}
+	infoFixture = Info{Tags: []string{"a"}, UserCount: 123, CodeHostCount: 456, ExpiresAt: timeFixture}
 )
 
 func TestInfo_EncodeDecode(t *testing.T) {

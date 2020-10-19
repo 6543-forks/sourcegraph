@@ -28,9 +28,10 @@ import (
 // license. Increment (encodedInfo).Version and formatVersion when you make backward-incompatbile
 // changes.
 type Info struct {
-	Tags      []string  `json:"t"` // tags that denote features/restrictions (e.g., "starter" or "dev")
-	UserCount uint      `json:"u"` // the number of users that this license is valid for
-	ExpiresAt time.Time `json:"e"` // the date when this license expires
+	Tags          []string  `json:"t"` // tags that denote features/restrictions (e.g., "starter" or "dev")
+	UserCount     uint      `json:"u"` // the number of users that this license is valid for
+	CodeHostCount uint      `json:"h"` // the number of code hosts that this license is valid for
+	ExpiresAt     time.Time `json:"e"` // the date when this license expires
 }
 
 // IsExpired reports whether the license has expired.
@@ -80,7 +81,7 @@ type encodedInfo struct {
 	Info
 }
 
-const formatVersion = 1 // (encodedInfo).Version value
+const formatVersion = 2 // (encodedInfo).Version value
 
 func (l Info) encode() ([]byte, error) {
 	e := encodedInfo{Version: formatVersion, Info: l}
