@@ -10,8 +10,7 @@ import {
     createTreeEntriesResult,
     createBlobContentResult,
 } from './graphQlResponseHelpers'
-
-import { WebGraphQlOperations, ViewerSettingsResult } from '../graphql-operations'
+import { WebGraphQlOperations } from '../graphql-operations'
 import { SharedGraphQlOperations } from '../../../shared/src/graphql-operations'
 import { Settings } from '../schema/settings.schema'
 import type * as sourcegraph from 'sourcegraph'
