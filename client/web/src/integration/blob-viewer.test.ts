@@ -197,7 +197,7 @@ describe('Blob viewer', () => {
             )
             await driver.page.waitForSelector('.test-repo-blob')
             await driver.page.waitForSelector('.test-breadcrumb')
-            await percySnapshot(driver.page, this.currentTest!.fullTitle())
+            await percySnapshot(driver.page, this.test!.fullTitle())
         })
 
         it.skip('shows a hover overlay from a hover provider when a token is hovered', async () => {
